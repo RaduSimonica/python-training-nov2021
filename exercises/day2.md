@@ -48,3 +48,22 @@ A word=a sequence of characters that is not whitespace (space, newline, tab).
     sparse is better than dense"""
     # Should print: 14 distinct words
     ```
+
+### Dicts exercises
+1. Given the following dictionary:
+    ```python
+    d = {
+      'times': 100, 
+      'name': 'George', 
+      'hobbies': ['fishing', 'hiking'],
+    }
+    ```
+    * add key `'friends'` to `d` with `['Andrei', 'Mihai', 'Alina']` as value
+    * sort value for key `'friends'`
+    * remove `'hiking'` from hobbies list
+    * remove `'times'` key from `d`
+1. Given a list of strings build a dictionary that has each unique string as a key and the 
+number of appearances as a value.
+    
+     E.g. `['hello', 'hello', 'is', 'there', 'anybody', 'in', 'there']` ->
+`{'hello': 2, 'is': 1, 'there': 2, 'anybody': 1, 'in': 1}`
