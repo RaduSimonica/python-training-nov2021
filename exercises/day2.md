@@ -24,3 +24,27 @@ other, ignore extra elements.
 
     E.g. `["Anna", "John", "Marie"]`, `[12, 15, 22, 13]` -> 
          `[("Anna", 12), ("John", 15), ("Marie", 22)]`
+
+### Sets exercises
+1. Given the following set:
+    ```python
+    s = set()
+    ```
+    * Add elements from `[1, 2, 3]` to the set
+    * Print the length of the set
+    * Check if `4` is in the set
+    * Remove and print an arbitrary element from the set
+    * Remove all remaining items in the set
+1. Write a Python program that counts the number of distinct words from a string.
+A word=a sequence of characters that is not whitespace (space, newline, tab).
+    
+    E.g. 
+    ```python
+    my_str = """beautiful is better than ugly
+    explicit is better than implicit
+    simple is better than complex
+    complex is better than complicated
+    flat is better than nested
+    sparse is better than dense"""
+    # Should print: 14 distinct words
+    ```
