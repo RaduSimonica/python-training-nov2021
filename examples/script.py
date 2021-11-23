@@ -2,6 +2,7 @@
 
 print('Hello world!')
 
+# This is a comment
 print('Not a very'); print('good idea')
 
 command = (
