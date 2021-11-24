@@ -40,3 +40,16 @@ Keys range from "a" to "e".
 1. Using the dictionary generated above, create another one where you swap keys and values. 
 1. Filter the above dictionary to contain only even keys. 
 1. Can you obtain dictionary from ex. 3 from the given string (`"abcde"`) in a single dict comprehension? 
+
+### Generators exercises
+1. Create a generator function that receives a parameter `max_nr` and yields a random number between `1` and `max_nr`, indefinitely. 
+    ```python
+    >>> import random
+    >>> random.randint(1, 10)  # returns a random integer between 1 and 10
+    1
+    >>> random.randint(1, 10)
+    10
+    >>> random.randint(1, 10)
+    6
+    ```
+1. Write a generator function that yields unique elements from an iterable received as parameter.
