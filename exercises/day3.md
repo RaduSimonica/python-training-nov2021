@@ -27,3 +27,16 @@ The function will receive 2 parameters – tag type and tag content and will ret
 1. Create a Python module where you import and call the functions defined above 
 (the one from the package and the remaining ones from `<functions_exercises_module>`).
 
+### Comprehensions exercises
+1. Create a dict `{"a": 97, "b": 98, ... }` using comprehension. Use `ord` built-in to obtain ASCII code.
+Keys range from "a" to "e". 
+    ```python
+    >>> import string
+    >>> string.ascii_lowercase
+    'abcdefghijklmnopqrstuvwxyz'
+    >>> ord('a')
+    97
+    ```
+1. Using the dictionary generated above, create another one where you swap keys and values. 
+1. Filter the above dictionary to contain only even keys. 
+1. Can you obtain dictionary from ex. 3 from the given string (`"abcde"`) in a single dict comprehension? 

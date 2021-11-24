@@ -14,5 +14,7 @@
 # import pypackage
 
 # Import a module from a package
-from pypackage import pymodule
-pymodule.pyfunc('Ana')
+# from pypackage import pymodule
+# pymodule.pyfunc('Ana')
+
+from pypackage.innerpackage import innermodule
