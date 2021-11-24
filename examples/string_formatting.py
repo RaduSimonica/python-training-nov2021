@@ -12,10 +12,10 @@ message = "My name is {} and my age next year is {}".format(name, age + 1)
 print(message)
 
 message = "My name is {name} and my age next year is {age}".format(
-    name=name.capitalize(), age=age + 1)
+    age=age + 1, name=name.capitalize())
 print(message)
 
-person = {'name': name.capitalize(), 'age': age + 1}
+person = {'name': name.capitalize(), 'age': age + 1, 'location': 'Bucharest'}
 
 message = "My name is {name} and my age next year is {age}".format(**person)
 print(message)
