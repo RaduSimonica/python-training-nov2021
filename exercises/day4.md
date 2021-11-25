@@ -13,3 +13,9 @@ Use `sorted` built-in function.
 ### Decorators exercises
 1. Write a decorator that computes (and displays) execution time for a function. 
 Hint: `time.time()` function returns current time in seconds.
+
+### OOP exercises
+1. Create a `BankAccount` class that receives two parameters on initialisation: 
+    * `bank name (str)`
+    * `balance (int)`
+1. Create two methods in this class, one to withdraw money and another one to deposit money into the account. The withdraw method will not allow withdrawing more money than available and it will raise an exception when you attempt to do that.
