@@ -1,12 +1,16 @@
 from datetime import date
 
 
+class AgeValidationError(Exception):
+    pass
+
+
 class Person:
     count = 0  # class variable
     MIN_DATE_OF_BIRTH = date(1900, 1, 1)
 
-    def __init__(self, name, date_of_birth=None):  # dunder / magic method
-        self.name = name  # instance variables
+    def __init__(self, full_name, date_of_birth=None):  # dunder / magic method
+        self.name = full_name  # instance variables
         self.date_of_birth = date_of_birth
         self.increment_count()
 
@@ -17,13 +21,13 @@ class Person:
     @date_of_birth.setter
     def date_of_birth(self, value):
         if value and value < self.MIN_DATE_OF_BIRTH:
-            raise ValueError('Invalid date of birth.')
+            raise AgeValidationError('Invalid date of birth.')
         self._date_of_birth = value
 
     @property
     def age(self):
         if not self.date_of_birth:
-            raise ValueError('Cannot compute age.')
+            raise AgeValidationError('Cannot compute age.')
         return self.compute_age(self.date_of_birth)
 
     def salute(self, greeting):  # instance method
@@ -43,6 +47,20 @@ class Person:
 
     def __int__(self):
         return self.age
+
+
+class Student(Person):
+    count = 0
+
+    def __init__(self, full_name, university, date_of_birth=None):
+        super().__init__(full_name, date_of_birth)
+        self.university = university
+
+    def salute(self, greeting):
+        print(f'{greeting}! I study at {self.university}!')
+
+    def study(self):
+        print(f'{self.name} is studying...')
 
 
 if __name__ == '__main__':
@@ -79,3 +97,10 @@ if __name__ == '__main__':
     anna.salute('Hello')
 
     print(Person.compute_age(date(1985, 2, 12)))
+
+    mike = Student('Mike', 'Politehnica', date(1999, 5, 29))
+    print(mike, mike.age, int(mike))
+    mike.salute('Hey')
+
+    print(Student.count)
+    mike.study()
