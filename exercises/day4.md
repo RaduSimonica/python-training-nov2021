@@ -1,0 +1,15 @@
+### Aggregations functions exercises
+1. Write a function `filter_short_words(word_list, n)` that returns the words in `word_list` shorter than `n`. Use `filter` built-in function.
+1. Given a list of tuples `(product, price_eur)`, build the list of `(product, price_ron)`, knowing that the exchange rate is `4.75`. Use `map` built-in function.
+    ```python
+    def f(tup):
+        return (tup[0], tup[1]*4.75)
+    ```
+1. Write a function that receives any number of strings and returns the list of unique strings ordered by number of appearances (most frequent → least frequent). 
+Use `sorted` built-in function.
+    
+    E.g. `f('hello', 'there', 'hello', 'hi', 'hi', 'hello')` -> `['hello', 'hi', 'there']`
+
+### Decorators exercises
+1. Write a decorator that computes (and displays) execution time for a function. 
+Hint: `time.time()` function returns current time in seconds.

@@ -32,6 +32,17 @@ def filter_long_words(*words, min_length=-1):
     return long_words
 
 
+def filter_long_words(*words, min_length=None):
+    # long_words = [word for word in words if len(word) > min_length]
+    if not min_length:
+        return list(words)
+    long_words = []
+    for word in words:
+        if len(word) > min_length:
+            long_words.append(word)
+    return long_words
+
+
 print(filter_long_words('hello', 'hi', 'bye', min_length=2))
 print(filter_long_words('hello', 'hi', ''))
 print(filter_long_words())
