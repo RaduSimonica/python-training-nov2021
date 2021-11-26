@@ -69,7 +69,7 @@ if __name__ == '__main__':
 
     try:
         anna.date_of_birth = date(1800, 1, 1)
-    except ValueError as ex:
+    except AgeValidationError as ex:
         print(ex)
 
     print(anna.date_of_birth)
